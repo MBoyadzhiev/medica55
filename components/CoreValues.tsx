@@ -17,7 +17,7 @@ const cards = [
     title: "Elite Coaching & Training",
     src: "/waterpolo3.jpg",
     description:
-      "Whether you're new to the sport or an experienced player looking to elevate your game, Whittier Polo Club offers elite coaching, high-level training, and a pathway to success at every stage of your water polo journey.",
+      "Whether you`&apos;`re new to the sport or an experienced player looking to elevate your game, Whittier Polo Club offers elite coaching, high-level training, and a pathway to success at every stage of your water polo journey.",
   },
   {
     title: "Pathway to Success",
@@ -54,10 +54,11 @@ const CoreValues = () => (
         </p>
         <p className="mt-4">
           We take pride in fostering a strong water polo community that
-          emphasizes discipline, strategy, and camaraderie. Whether you're new
-          to the sport or an experienced player looking to elevate your game,
-          Whittier Polo Club offers elite coaching, high-level training, and a
-          pathway to success at every stage of your water polo journey.
+          emphasizes discipline, strategy, and camaraderie. Whether
+          you`&apos;`re new to the sport or an experienced player looking to
+          elevate your game, Whittier Polo Club offers elite coaching,
+          high-level training, and a pathway to success at every stage of your
+          water polo journey.
         </p>
       </div>
     </div>

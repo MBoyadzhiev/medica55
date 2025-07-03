@@ -29,7 +29,7 @@ const cards = [
     ctaLink: "#",
     content: () => (
       <p>
-        Maria's quick reflexes and strategic mind make her one of the top
+        Maria&apos;s quick reflexes and strategic mind make her one of the top
         goalies in the league. She is a mentor to younger players and volunteers
         as a youth coach.
       </p>
@@ -57,7 +57,7 @@ const cards = [
     ctaLink: "#",
     content: () => (
       <p>
-        Samantha's versatility allows her to play any position. She is a
+        Samantha&apos;s versatility allows her to play any position. She is a
         dedicated team player, club ambassador, and helps with community
         outreach.
       </p>
@@ -206,7 +206,7 @@ export function OurTeam() {
         ) : null}
       </AnimatePresence>
       <ul className="max-w-4xl mx-auto w-full gap-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        {cards.map((card, index) => (
+        {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}

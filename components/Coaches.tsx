@@ -20,8 +20,8 @@ const Coaches = () => (
     <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
       Our Coaches
     </h2>
-    <div className="flex flex-col md:flex-row gap-20 justify-center items-center mb-8 w-full max-w-3xl">
-      {coaches.map((coach, idx) => (
+    <div className="flex flex-col md:flex-row gap-8 justify-center items-center mb-8 w-full max-w-3xl">
+      {coaches.map((coach) => (
         <div
           key={coach.name}
           className="flex flex-col items-center w-full md:w-auto"
@@ -41,7 +41,7 @@ const Coaches = () => (
       ))}
     </div>
     <div className="hidden md:flex flex-row gap-8 justify-center items-start max-w-3xl w-full mx-auto">
-      {coaches.map((coach, idx) => (
+      {coaches.map((coach) => (
         <div key={coach.name} className="flex-1 text-center">
           <div className="text-xl font-semibold mb-2">{coach.name}</div>
           <div className="text-gray-700 text-base">{coach.info}</div>
