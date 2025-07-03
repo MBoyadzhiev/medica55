@@ -10,7 +10,7 @@ const coaches = [
   },
   {
     name: "John Pringle",
-    photo: "/djippov.webp",
+    photo: "/trainer2.jpg",
     info: "With over 20 years of experience, Coach John Pringle is a highly successful coach and educator. He has a B.A. in American Literature and Culture from UCLA and M.Ed. in Education - School Leadership from USC. Pringle has been the head boys and girls water polo coach at La Serna High School since 2015, leading his teams to multiple league championships and 3 CIF titles.",
   },
 ];

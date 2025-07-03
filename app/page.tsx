@@ -8,6 +8,7 @@ import JoinUs from "@/components/JoinUs";
 import OurTeam from "@/components/OurTeam";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       <OurTeam />
       <Gallery />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -45,45 +45,18 @@ function isSameDay(a: Date, b: Date) {
 const eventDays = events.map((e) => e.date);
 
 const TrainingCalendar = () => {
-  const [selected, setSelected] = useState<Date | undefined>(undefined);
-  const selectedEvents = selected
-    ? events.filter((e) => isSameDay(e.date, selected))
-    : [];
-
   return (
-    <div className="p-12 max-w-xl mx-auto">
-      <DayPicker
-        mode="single"
-        selected={selected}
-        onSelect={setSelected as any}
-        modifiers={{ event: eventDays }}
-        modifiersClassNames={{ event: "bg-blue-200 text-blue-900 font-bold" }}
-        className="mx-auto"
-      />
-      {selected && selectedEvents.length > 0 && (
-        <div className="mt-6">
-          <h3 className="text-lg font-semibold mb-2">
-            Events on {selected.toLocaleDateString()}
-          </h3>
-          <ul>
-            {selectedEvents.map((event, idx) => (
-              <li
-                key={idx}
-                className="mb-2 p-3 rounded bg-blue-50 border border-blue-200"
-              >
-                <div className="font-bold">{event.title}</div>
-                <div className="text-sm text-blue-800">{event.time}</div>
-                <div className="text-sm">{event.description}</div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-      {selected && selectedEvents.length === 0 && (
-        <div className="mt-6 text-gray-500 text-center">
-          No events for this day.
-        </div>
-      )}
+    <div className="flex justify-center items-center w-full py-8">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=martin.boyadzhiev%40clouddo.eu&ctz=Europe%2FSofia"
+        style={{ border: 0 }}
+        width="1000"
+        height="600"
+        frameBorder="0"
+        scrolling="no"
+        className="rounded-lg shadow-lg w-full max-w-5xl h-[600px] min-h-[400px]"
+        title="Whittier Club Water Polo Training Calendar"
+      ></iframe>
     </div>
   );
 };
