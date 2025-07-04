@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -44,22 +45,22 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <ul className="hidden md:flex gap-6 font-bold text-white dark:text-sky-200">
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="#">Partners</a>
+              <Link href="#">Partners</Link>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <Link href="#">About Us</Link>
             </li>
             <li>
-              <a href="#">Gallery</a>
+              <Link href="#">Gallery</Link>
             </li>
             <li>
-              <a href="#">Schedule</a>
+              <Link href="#">Schedule</Link>
             </li>
             <li>
-              <a href="/contacts">Contact Us</a>
+              <Link href="/contacts">Contact Us</Link>
             </li>
           </ul>
           {/* Instagram icon - only show on md and up */}
