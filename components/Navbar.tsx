@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <ul className="hidden md:flex gap-6 font-bold text-white dark:text-sky-200">
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="#">Partners</a>
@@ -59,7 +59,7 @@ export default function Navbar() {
               <a href="#">Schedule</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="/contacts">Contact Us</a>
             </li>
           </ul>
           {/* Instagram icon - only show on md and up */}

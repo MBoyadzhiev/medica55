@@ -12,7 +12,7 @@ const TrainingCalendar = () => {
         height="600"
         frameBorder="0"
         scrolling="no"
-        className="rounded-lg shadow-lg w-full max-w-5xl h-[600px] min-h-[400px]"
+        className="rounded-lg w-full max-w-5xl h-[600px] min-h-[400px]"
         title="Whittier Club Water Polo Training Calendar"
       ></iframe>
     </div>
