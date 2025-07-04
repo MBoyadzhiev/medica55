@@ -51,10 +51,10 @@ export default function Navbar() {
               <Link href="#">Partners</Link>
             </li>
             <li>
-              <Link href="#">About Us</Link>
+              <Link href="/history">About Us</Link>
             </li>
             <li>
-              <Link href="#">Gallery</Link>
+              <Link href="/gallery">Gallery</Link>
             </li>
             <li>
               <Link href="#">Schedule</Link>

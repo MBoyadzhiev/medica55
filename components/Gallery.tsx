@@ -25,7 +25,7 @@ export function Gallery() {
     },
   ];
   return (
-    <div className="relative overflow-hidden w-full h-full py-20">
+    <div className="relative overflow-hidden w-full h-full py-20 bg-white">
       <Carousel slides={slideData} />
     </div>
   );

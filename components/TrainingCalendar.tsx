@@ -4,7 +4,7 @@ import "react-day-picker/dist/style.css";
 
 const TrainingCalendar = () => {
   return (
-    <div className="flex justify-center items-center w-full py-8">
+    <div className="flex justify-center items-center w-full py-8 bg-white">
       <iframe
         src="https://calendar.google.com/calendar/embed?src=martin.boyadzhiev%40clouddo.eu&ctz=Europe%2FSofia"
         style={{ border: 0 }}
