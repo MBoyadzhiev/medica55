@@ -13,7 +13,7 @@ export default function Gallery() {
         className="relative w-full h-[250px] md:h-[350px] lg:h-[450px] 2xl:h-[600px] flex items-center justify-center overflow-hidden"
       >
         <Image
-          src="/waterpolo2.jpg"
+          src="/ped_rheuma.jpg"
           alt="Gallery Hero"
           className="w-full h-full object-cover object-center"
           width={1920}
