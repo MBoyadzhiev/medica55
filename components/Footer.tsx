@@ -1,8 +1,16 @@
+import Image from "next/image";
+
 const Footer = () => (
   <footer className="bg-white m-4 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
     <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
       <div className="flex items-center mb-4 md:mb-0">
-        <img src="/logo.PNG" className="h-16 mr-3" alt="Whittier Club Logo" />
+        <Image
+          src="/logo.PNG"
+          className="h-16 mr-3"
+          alt="МЦ Медика 55"
+          width={64}
+          height={64}
+        />
         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
           МЦ &quot;Медика 55&quot;
         </span>

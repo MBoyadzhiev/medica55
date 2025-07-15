@@ -2,10 +2,13 @@
 
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export type CardType = {
   title: string;
   src: string;
+  width: number;
+  height: number;
   description?: React.ReactNode;
   className?: string;
 };
@@ -31,10 +34,12 @@ export const Card = React.memo(
         card.className
       )}
     >
-      <img
+      <Image
         src={card.src}
         alt={card.title}
         className="object-cover w-full h-full absolute inset-0"
+        width={card.width}
+        height={card.height}
       />
       <div
         className={cn(

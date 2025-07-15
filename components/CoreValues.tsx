@@ -49,6 +49,8 @@ const CoreValues = () => (
         cards={cards.map((card) => ({
           title: card.title,
           src: card.src,
+          width: 250,
+          height: 250,
           description: (
             <span className="block text-base md:text-lg font-medium mt-2">
               {card.description}

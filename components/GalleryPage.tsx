@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const images = [
   { src: "/ped_gastro.jpg", alt: "Gallery Image 1" },
@@ -41,10 +42,12 @@ const GalleryPage = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {images.map((img, idx) => (
           <div key={img.src + idx}>
-            <img
+            <Image
               className="w-full h-64 object-cover rounded-lg cursor-pointer transition-transform duration-200 hover:scale-105"
               src={img.src}
               alt={img.alt}
+              width={800}
+              height={600}
               onClick={() => setLightboxIdx(idx)}
             />
           </div>
@@ -56,7 +59,7 @@ const GalleryPage = () => {
           className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center cursor-zoom-out"
           onClick={() => setLightboxIdx(null)}
         >
-          <img
+          <Image
             src={images[lightboxIdx].src}
             alt={images[lightboxIdx].alt}
             className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg border-4 border-white"

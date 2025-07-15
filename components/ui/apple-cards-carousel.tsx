@@ -15,6 +15,7 @@ import {
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Image from "next/image";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -25,6 +26,8 @@ type CardType = {
   src: string;
   title: string;
   content: React.ReactNode;
+  width: number;
+  height: number;
 };
 
 export const CarouselContext = createContext<{
@@ -200,7 +203,7 @@ export const Card = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
+              className="fixed inset-0 h-full w-full bg-black/40 md:bg-black/80 backdrop-blur-sm md:backdrop-blur-lg"
             />
             <motion.div
               initial={{ opacity: 0 }}
@@ -208,7 +211,7 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900"
+              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white/95 p-4 font-sans md:p-10 dark:bg-neutral-900/95"
             >
               <button
                 className="sticky top-4 right-0 ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white"
@@ -245,6 +248,8 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           className="absolute inset-0 z-10 object-cover rounded-3xl"
+          width={card.width}
+          height={card.height}
         />
       </motion.button>
     </>
@@ -260,8 +265,8 @@ export const BlurImage = ({
   // fill, // Removed unused 'fill'
   ...rest
 }: {
-  height?: number;
-  width?: number;
+  height: number;
+  width: number;
   src: string;
   className?: string;
   alt?: string;
@@ -273,7 +278,7 @@ export const BlurImage = ({
   if (imgProps.fill !== undefined) delete imgProps.fill;
   return (
     // TODO: For best performance, replace <img> with next/image if possible. See: https://nextjs.org/docs/messages/no-img-element
-    <img
+    <Image
       className={cn(
         "h-full w-full transition duration-300",
         isLoading ? "blur-sm" : "blur-0",

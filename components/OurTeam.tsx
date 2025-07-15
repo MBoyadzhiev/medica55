@@ -5,6 +5,7 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Image from "next/image";
 
 const cards = [
   {
@@ -146,7 +147,7 @@ export function OurTeam() {
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
-                <img
+                <Image
                   width={200}
                   height={200}
                   src={active.src}
@@ -197,7 +198,7 @@ export function OurTeam() {
                 layoutId={`image-${card.title}-${id}`}
                 className="w-28 h-28 flex-shrink-0 mx-auto"
               >
-                <img
+                <Image
                   width={112}
                   height={112}
                   src={card.src}

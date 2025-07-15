@@ -137,6 +137,8 @@ export default function TeamCards() {
           <Card
             key={doctor.name}
             card={{
+              width: 250,
+              height: 250,
               src: doctor.photo,
               title: doctor.name,
               content: doctor.content,

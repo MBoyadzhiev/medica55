@@ -7,6 +7,7 @@ import OurTeam from "@/components/OurTeam";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -17,10 +18,12 @@ export default function Home() {
         <CoreValues />
       </AuroraBackground>
       <div className="mb-8 mt-8 text-center text-black">
-        <img
+        <Image
           src="/logo.PNG"
           alt="Медицински център Медика 55"
           className="mx-auto mb-8 w-60 h-60 object-contain mt-8"
+          width={240}
+          height={240}
         />
       </div>
       <JoinUs />

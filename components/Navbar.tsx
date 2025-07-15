@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -35,7 +36,13 @@ export default function Navbar() {
       {/* Main navbar content */}
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center gap-2">
-          <img src="/logo.PNG" alt="Logo" className="h-20" />
+          <Image
+            src="/logo.PNG"
+            alt="Logo"
+            className="h-20"
+            width={80}
+            height={80}
+          />
           <span className="text-black text-2xl font-bold">
             МЦ &quot;Медика 55&quot;{" "}
           </span>

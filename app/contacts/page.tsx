@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import LocationMap from "@/components/LocationMap";
 import ContactInfo from "@/components/ContactInfo";
 import WorkingHours from "@/components/WorkingHours";
+import Image from "next/image";
 
 const ContactsPage = () => {
   return (
@@ -12,10 +13,12 @@ const ContactsPage = () => {
         id="video-hero-section"
         className="w-full h-[250px] md:h-[350px] lg:h-[450px] 2xl:h-[600px] relative"
       >
-        <img
+        <Image
           src="/pediatrics.jpg"
           alt="Water Polo Action"
           className="w-full h-full object-cover object-center"
+          width={1920}
+          height={600}
         />
         <div className="absolute inset-0 bg-black/20" />
       </div>

@@ -4,15 +4,20 @@ import { useRef, useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const DirectionAwareHover = ({
   imageUrl,
+  width = 1000,
+  height = 1000,
   children,
   childrenClassName,
   imageClassName,
   className,
 }: {
   imageUrl: string;
+  width?: number;
+  height?: number;
   children: React.ReactNode | string;
   childrenClassName?: string;
   imageClassName?: string;
@@ -85,14 +90,14 @@ export const DirectionAwareHover = ({
               ease: "easeOut",
             }}
           >
-            <img
+            <Image
               alt="image"
               className={cn(
                 "h-full w-full object-cover scale-[1.15]",
                 imageClassName
               )}
-              width="1000"
-              height="1000"
+              width={width}
+              height={height}
               src={imageUrl}
             />
           </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const doctors = [
   {
@@ -49,9 +50,11 @@ export default function AppointmentsList() {
             key={doctor.name}
             className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transition hover:shadow-2xl"
           >
-            <img
+            <Image
               src={doctor.photo}
               alt={doctor.name}
+              width={128}
+              height={128}
               className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-sky-100 shadow"
             />
             <h2 className="text-xl font-semibold mb-4 text-center">
