@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import ContactForm from "@/components/ContactForm";
 import LocationMap from "@/components/LocationMap";
 import ContactInfo from "@/components/ContactInfo";
 import WorkingHours from "@/components/WorkingHours";
@@ -14,7 +13,7 @@ const ContactsPage = () => {
         className="w-full h-[250px] md:h-[350px] lg:h-[450px] 2xl:h-[600px] relative"
       >
         <img
-          src="/waterpolo2.jpg"
+          src="/pediatrics.jpg"
           alt="Water Polo Action"
           className="w-full h-full object-cover object-center"
         />
@@ -32,10 +31,6 @@ const ContactsPage = () => {
             <div className="flex-1 flex items-stretch">
               <WorkingHours />
             </div>
-          </div>
-          {/* Contact Form */}
-          <div className="flex-1 flex items-center justify-center">
-            <ContactForm />
           </div>
         </div>
       </section>

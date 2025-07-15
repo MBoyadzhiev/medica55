@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full bg-transparent z-50 px-4 py-3 transition-opacity duration-300 ${
+      className={`fixed top-0 left-0 w-full bg-white/80 z-50 px-4 py-3 transition-opacity duration-300 backdrop-blur-md ${
         show
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
@@ -35,32 +35,32 @@ export default function Navbar() {
       {/* Main navbar content */}
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center gap-2">
-          <img src="/Whittier_bg.png" alt="Logo" className="h-20" />
-          <span className="text-white text-2xl font-bold">
-            Whittier Club WPF{" "}
+          <img src="/logo.png" alt="Logo" className="h-20" />
+          <span className="text-black text-2xl font-bold">
+            МЦ &quot;Медика 55&quot;{" "}
           </span>
         </div>
 
         {/* Desktop nav */}
         <div className="flex items-center gap-6">
-          <ul className="hidden md:flex gap-6 font-bold text-white dark:text-sky-200">
+          <ul className="hidden md:flex gap-6 font-bold text-black">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">За Нас</Link>
             </li>
             <li>
-              <Link href="#">Partners</Link>
+              <Link href="/team">Екип</Link>
             </li>
             <li>
-              <Link href="/history">About Us</Link>
+              <Link href="/procedures">Дейонсти</Link>
             </li>
             <li>
-              <Link href="/gallery">Gallery</Link>
+              <Link href="/appointments">Запази час</Link>
             </li>
             <li>
-              <Link href="#">Schedule</Link>
+              <Link href="/gallery">Галерия</Link>
             </li>
             <li>
-              <Link href="/contacts">Contact Us</Link>
+              <Link href="/contacts">Контакти</Link>
             </li>
           </ul>
           {/* Instagram icon - only show on md and up */}
@@ -68,7 +68,7 @@ export default function Navbar() {
             href="https://www.instagram.com/whittierclubwpf/"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 text-white hover:text-pink-400 transition-colors hidden md:inline-flex"
+            className="ml-2 text-black hover:text-pink-400 transition-colors hidden md:inline-flex"
             aria-label="Instagram"
           >
             <svg
@@ -128,43 +128,43 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="absolute top-full left-0 w-full bg-white/90 dark:bg-black/90 shadow-lg rounded-b-2xl flex flex-col items-center py-4 md:hidden animate-fade-in z-40">
-          <a
-            href="#"
-            className="py-2 w-full text-center text-sky-900 dark:text-sky-200 font-medium hover:bg-sky-100 dark:hover:bg-sky-800"
+        <div className="absolute top-full left-0 w-full bg-white/90 shadow-lg rounded-b-2xl flex flex-col items-center py-4 md:hidden animate-fade-in z-40">
+          <Link
+            href="/"
+            className="py-2 w-full text-center text-black font-medium hover:bg-sky-100"
           >
-            Home
-          </a>
-          <a
-            href="#"
-            className="py-2 w-full text-center text-sky-900 dark:text-sky-200 font-medium hover:bg-sky-100 dark:hover:bg-sky-800"
+            За Нас
+          </Link>
+          <Link
+            href="/team"
+            className="py-2 w-full text-center text-black font-medium hover:bg-sky-100"
           >
-            Partners
-          </a>
-          <a
-            href="#"
-            className="py-2 w-full text-center text-sky-900 dark:text-sky-200 font-medium hover:bg-sky-100 dark:hover:bg-sky-800"
+            Екип
+          </Link>
+          <Link
+            href="/procedures"
+            className="py-2 w-full text-center text-black font-medium hover:bg-sky-100"
           >
-            About Us
-          </a>
-          <a
-            href="#"
-            className="py-2 w-full text-center text-sky-900 dark:text-sky-200 font-medium hover:bg-sky-100 dark:hover:bg-sky-800"
+            Дейонсти
+          </Link>
+          <Link
+            href="/appointments"
+            className="py-2 w-full text-center text-black font-medium hover:bg-sky-100"
           >
-            Schedule
-          </a>
-          <a
-            href="#"
-            className="py-2 w-full text-center text-sky-900 dark:text-sky-200 font-medium hover:bg-sky-100 dark:hover:bg-sky-800"
+            Запази час
+          </Link>
+          <Link
+            href="/gallery"
+            className="py-2 w-full text-center text-black font-medium hover:bg-sky-100"
           >
-            Contact Us
-          </a>
+            Галерия
+          </Link>
           {/* Instagram icon for mobile */}
-          <a
+          <Link
             href="https://www.instagram.com/whittierclubwpf/"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 text-sky-900 dark:text-sky-200 hover:text-pink-400 transition-colors"
+            className="mt-4 text-black hover:text-pink-400 transition-colors"
             aria-label="Instagram"
           >
             <svg
@@ -195,7 +195,7 @@ export default function Navbar() {
               />
               <circle cx="17" cy="7" r="1.2" fill="currentColor" />
             </svg>
-          </a>
+          </Link>
         </div>
       )}
     </nav>

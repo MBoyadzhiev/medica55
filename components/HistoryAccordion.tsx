@@ -2,20 +2,64 @@ import { useState } from "react";
 
 const historyData = [
   {
-    period: "Founding Years (1948-1960)",
-    text: "The club was founded in 1948, bringing together passionate athletes and coaches to promote water polo in the region. Early years were marked by dedication, community support, and the first local competitions.",
+    period: "Детска Гастроентерология",
+    text: (
+      <ul className="list-disc pl-6">
+        <li>Диагностика и лечение на стомашно-чревни заболявания при деца</li>
+        <li>Проследяване на хронични гастроентерологични състояния</li>
+        <li>Консултации при коремна болка, повръщане, диария, запек</li>
+        <li>Хранителни алергии и непоносимости</li>
+        <li>Ултразвукова диагностика на коремни органи</li>
+      </ul>
+    ),
   },
   {
-    period: "Growth and Success (1961-1990)",
-    text: "During these decades, the club expanded its youth and adult programs, winning several regional championships and establishing itself as a leader in water polo training and sportsmanship.",
+    period: "Детска Пулмология",
+    text: (
+      <ul className="list-disc pl-6">
+        <li>Диагностика и лечение на астма, бронхити, пневмонии</li>
+        <li>Проследяване на деца с чести респираторни инфекции</li>
+        <li>Функционално изследване на дишането (спирометрия)</li>
+        <li>Лечение на алергичен ринит и синузит</li>
+      </ul>
+    ),
   },
   {
-    period: "Modern Era (1991-2020)",
-    text: "The club embraced modern training techniques, technology, and international competition. Many athletes went on to compete at national and collegiate levels, and the club hosted major tournaments.",
+    period: "Детска Алергология",
+    text: (
+      <ul className="list-disc pl-6">
+        <li>Алергологични тестове (кожни и кръвни)</li>
+        <li>Диагностика и лечение на хранителни, дихателни и кожни алергии</li>
+        <li>Лечение на атопичен дерматит, уртикария, алергичен конюнктивит</li>
+        <li>Имунотерапия при алергии</li>
+      </ul>
+    ),
   },
   {
-    period: "2020s and Beyond",
-    text: "Today, Whittier Club Water Polo Foundation continues to inspire new generations, focusing on excellence, teamwork, and community involvement. The future is bright for our athletes and supporters!",
+    period: "Детска Ендокринология",
+    text: (
+      <ul className="list-disc pl-6">
+        <li>Проследяване на растеж и развитие при деца</li>
+        <li>Диагностика и лечение на диабет тип 1</li>
+        <li>Лечение на заболявания на щитовидната жлеза</li>
+        <li>Проследяване на пубертетни нарушения</li>
+        <li>Консултации при затлъстяване и метаболитни нарушения</li>
+      </ul>
+    ),
+  },
+  {
+    period: "Детска Ревматология",
+    text: (
+      <ul className="list-disc pl-6">
+        <li>
+          Диагностика и лечение на ставни болки и възпалителни ставни
+          заболявания
+        </li>
+        <li>Проследяване на автоимунни и автоинфламаторни заболявания</li>
+        <li>Лечение на системни заболявания на съединителната тъкан</li>
+        <li>Консултации при подуване и болка в ставите</li>
+      </ul>
+    ),
   },
 ];
 

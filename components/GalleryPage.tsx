@@ -3,19 +3,24 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  { src: "/gallery1.jpg", alt: "Gallery Image 1" },
-  { src: "/gallery2.jpg", alt: "Gallery Image 2" },
-  { src: "/gallery3.jpg", alt: "Gallery Image 3" },
-  { src: "/gallery4.jpg", alt: "Gallery Image 4" },
-  { src: "/waterpolo1.jpeg", alt: "Water Polo 1" },
-  { src: "/waterpolo2.jpg", alt: "Water Polo 2" },
-  { src: "/waterpolo3.jpg", alt: "Water Polo 3" },
-  { src: "/waterpolo4.jpg", alt: "Water Polo 4" },
-  { src: "/join-us.jpg", alt: "Join Us" },
-  { src: "/trainer2.jpg", alt: "Trainer 2" },
-  { src: "/djippov.webp", alt: "Djippov" },
-  { src: "/Whittier_bg.png", alt: "Whittier Logo BG" },
-  { src: "/Whittier.png", alt: "Whittier Logo" },
+  { src: "/ped_gastro.jpg", alt: "Gallery Image 1" },
+  { src: "/ped_pulmo.jpg", alt: "Gallery Image 2" },
+  { src: "/ped_alergy.jpg", alt: "Gallery Image 3" },
+  { src: "/ped_endo.jpg", alt: "Gallery Image 4" },
+  { src: "/ped_rheuma.jpg", alt: "Gallery Image 5" },
+  { src: "/pediatrics.jpg", alt: "Gallery Image 6" },
+  { src: "/ped_gastro.jpg", alt: "Gallery Image 7" },
+  { src: "/ped_pulmo.jpg", alt: "Gallery Image 8" },
+  { src: "/ped_alergy.jpg", alt: "Gallery Image 9" },
+  { src: "/ped_endo.jpg", alt: "Gallery Image 10" },
+  { src: "/ped_rheuma.jpg", alt: "Gallery Image 11" },
+  { src: "/pediatrics.jpg", alt: "Gallery Image 12" },
+  { src: "/ped_gastro.jpg", alt: "Gallery Image 13" },
+  { src: "/ped_pulmo.jpg", alt: "Gallery Image 14" },
+  { src: "/ped_alergy.jpg", alt: "Gallery Image 15" },
+  { src: "/ped_endo.jpg", alt: "Gallery Image 16" },
+  { src: "/ped_rheuma.jpg", alt: "Gallery Image 17" },
+  { src: "/pediatrics.jpg", alt: "Gallery Image 18" },
 ];
 
 const GalleryPage = () => {

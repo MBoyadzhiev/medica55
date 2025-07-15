@@ -1,27 +1,33 @@
 "use client";
 
 import { Carousel } from "@/components/ui/carousel";
+import { useRouter } from "next/navigation";
 export function Gallery() {
+  const router = useRouter();
   const slideData = [
     {
-      title: "Mystic Mountains",
-      button: "See All Photos",
-      src: "/gallery1.jpg",
+      title: "Детска Гастроентерология",
+      button: "Виж всички снимки",
+      src: "/ped_gastro.jpg",
+      onClick: () => router.push("/gallery"),
     },
     {
-      title: "Urban Dreams",
-      button: "See All Photos",
-      src: "/gallery2.jpg",
+      title: "Детска Пулмология",
+      button: "Виж всички снимки",
+      src: "/ped_pulmo.jpg",
+      onClick: () => router.push("/gallery"),
     },
     {
-      title: "Neon Nights",
-      button: "See All Photos",
-      src: "/gallery3.jpg",
+      title: "Детска Алергология",
+      button: "Виж всички снимки",
+      src: "/ped_alergy.jpg",
+      onClick: () => router.push("/gallery"),
     },
     {
-      title: "Desert Whispers",
-      button: "See All Photos",
-      src: "/gallery4.jpg",
+      title: "Детска Ендокринология",
+      button: "Виж всички снимки",
+      src: "/ped_endo.jpg",
+      onClick: () => router.push("/gallery"),
     },
   ];
   return (

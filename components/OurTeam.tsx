@@ -8,84 +8,69 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 
 const cards = [
   {
-    description: "Center Forward",
-    title: "Alex Johnson",
-    src: "/waterpolo1.jpeg",
+    title: "Проф. д-р Миглена Георгиева",
+    src: "/georgieva.jpg",
     ctaText: "See More",
     ctaLink: "#",
     content: () => (
       <p>
-        Alex is known for his powerful shots and leadership in the pool. He has
-        been with the club for 3 years and is a key playmaker. Alex also mentors
-        new players and helps organize team events.
+        Специалист по детска гастроентерология с дългогодишен опит в
+        диагностиката и лечението на стомашно-чревни заболявания при деца. Автор
+        на множество научни публикации и преподавател в Медицински университет.
       </p>
     ),
   },
   {
-    description: "Goalkeeper",
-    title: "Maria Lopez",
-    src: "/waterpolo2.jpg",
+    title: "Д-р Ния Рашева",
+    src: "/rasheva.jpg",
     ctaText: "See More",
     ctaLink: "#",
     content: () => (
       <p>
-        Maria&apos;s quick reflexes and strategic mind make her one of the top
-        goalies in the league. She is a mentor to younger players and volunteers
-        as a youth coach.
+        Детски гастроентеролог с експертиза в лечението на астма, бронхити и
+        други гастроентерологични заболявания при деца. Известна с индивидуалния
+        си подход към всеки пациент.
       </p>
     ),
   },
   {
-    description: "Driver",
-    title: "Chris Lee",
-    src: "/waterpolo3.jpg",
+    title: "Д-р Мартина Гълъбова",
+    src: "/galabova.jpg",
     ctaText: "See More",
     ctaLink: "#",
     content: () => (
       <p>
-        Chris is known for his speed and agility, always creating opportunities
-        for the team. He joined the club last season and is also a competitive
-        swimmer.
+        Специалист по детска алергология и пулмология. Провежда алергологични
+        тестове и съвременно лечение на алергии и белодробни заболявания при
+        деца.
       </p>
     ),
   },
   {
-    description: "Utility",
-    title: "Samantha Green",
-    src: "/waterpolo4.jpg",
+    title: "Д-р Мариана Москова",
+    src: "/moskova.jpg",
     ctaText: "See More",
     ctaLink: "#",
     content: () => (
       <p>
-        Samantha&apos;s versatility allows her to play any position. She is a
-        dedicated team player, club ambassador, and helps with community
-        outreach.
+        Д-р Мариана Москова е специалист детски ендокринолог и педиатър в с над
+        20 години опит. Извършва прегледи, диагностика и лечение на деца с общи
+        и ендокринологични проблеми.
       </p>
     ),
   },
   {
-    description: "Defender",
-    title: "Liam Carter",
-    src: "/waterpolo1.jpeg",
+    title: "Д-р Мартин Бояджиев",
+    src: "/boyadzhiev.jpg",
     ctaText: "See More",
     ctaLink: "#",
     content: () => (
       <p>
-        Liam is a defensive specialist, always ready to block shots and support
-        his teammates. He brings energy and focus to every match.
-      </p>
-    ),
-  },
-  {
-    description: "Attacker",
-    title: "Emily Chen",
-    src: "/waterpolo2.jpg",
-    ctaText: "See More",
-    ctaLink: "#",
-    content: () => (
-      <p>
-        Emily is a fast and creative attacker, known for her quick passes and
-        accurate shots. She joined the club two years ago and is a rising star.
+        Детски ревматолог с над 10 години медицински опит с интереси в областта
+        на диагностиката и лечението на автоинфламаторни заболявания, периодични
+        синдроми и васкулити. Извършва диагностика и лечение на ревматологични
+        заболявания, възпалителни и дегенеративни ставни заболявания, системни
+        заболявания на съединителната тъкан и др.
       </p>
     ),
   },
@@ -120,7 +105,7 @@ export function OurTeam() {
   return (
     <section className="w-full bg-white py-16 flex flex-col items-center justify-center mt-16">
       <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-        Our Team
+        Нашият екип
       </h2>
       <AnimatePresence>
         {active && typeof active === "object" && (
@@ -179,12 +164,6 @@ export function OurTeam() {
                     >
                       {active.title}
                     </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400"
-                    >
-                      {active.description}
-                    </motion.p>
                   </div>
                 </div>
                 <div className="pt-4 relative px-4">
@@ -233,12 +212,6 @@ export function OurTeam() {
                 >
                   {card.title}
                 </motion.h3>
-                <motion.p
-                  layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 text-center md:text-left"
-                >
-                  {card.description}
-                </motion.p>
               </div>
             </div>
           </motion.div>

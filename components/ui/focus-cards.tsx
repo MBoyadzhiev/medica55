@@ -55,17 +55,55 @@ Card.displayName = "Card";
 export function FocusCards({ cards }: { cards: CardType[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
 
+  // Special grid for 5 cards: 3 on top, 2 centered below
+  const isFiveCards = cards.length === 5;
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 max-w-7xl mx-auto md:px-8 w-full">
-      {cards.map((card, index) => (
-        <Card
-          key={card.title}
-          card={card}
-          index={index}
-          hovered={hovered}
-          setHovered={setHovered}
-        />
-      ))}
+    <div
+      className={
+        isFiveCards
+          ? "hidden md:grid grid-cols-3 grid-rows-2 gap-8 max-w-7xl mx-auto md:px-8 w-full"
+          : "grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto md:px-8 w-full"
+      }
+      style={isFiveCards ? { gridTemplateRows: "1fr 1fr" } : {}}
+    >
+      {isFiveCards
+        ? [
+            // First row: 3 cards
+            ...cards
+              .slice(0, 3)
+              .map((card, index) => (
+                <Card
+                  key={card.title}
+                  card={card}
+                  index={index}
+                  hovered={hovered}
+                  setHovered={setHovered}
+                />
+              )),
+            // Second row: 2 cards centered
+            <div key="spacer-left" className="hidden md:block" />,
+            ...cards
+              .slice(3)
+              .map((card, index) => (
+                <Card
+                  key={card.title}
+                  card={card}
+                  index={index + 3}
+                  hovered={hovered}
+                  setHovered={setHovered}
+                />
+              )),
+            <div key="spacer-right" className="hidden md:block" />,
+          ]
+        : cards.map((card, index) => (
+            <Card
+              key={card.title}
+              card={card}
+              index={index}
+              hovered={hovered}
+              setHovered={setHovered}
+            />
+          ))}
     </div>
   );
 }

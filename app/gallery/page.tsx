@@ -4,7 +4,7 @@ import GalleryPage from "@/components/GalleryPage";
 
 export default function Gallery() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-100 to-blue-200">
+    <div className="min-h-screen bg-white">
       <Navbar />
       {/* Hero Image */}
       <div

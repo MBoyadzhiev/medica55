@@ -1,9 +1,11 @@
 const HistoryIntro = () => (
   <div className="bg-white rounded-2xl p-6 text-gray-700 text-xl text-center mb-6">
     <p>
-      Welcome to the story of Whittier Club Water Polo Foundation! Our club has
-      a rich tradition of excellence, teamwork, and community spirit. Explore
-      the milestones and memories that have shaped our journey.
+      МЦ &quot;Медика 55&quot; предлага специализирана извънболнична помощ за
+      деца в областта на гастроентерологията, пулмологията, алергологията,
+      ендокринологията и ревматологията. Извършват се прегледи, диагностика,
+      лечение и проследяване на различни детски заболявания от опитни
+      специалисти.
     </p>
   </div>
 );
