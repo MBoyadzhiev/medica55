@@ -2,7 +2,7 @@
 
 import { Carousel } from "@/components/ui/carousel";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+
 export function Gallery() {
   const router = useRouter();
   const slideData = [
