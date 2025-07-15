@@ -41,7 +41,7 @@ export default function AppointmentsList() {
 
   return (
     <div className="max-w-6xl mx-auto py-10 px-4">
-      <h1 className="text-3xl font-bold text-center mb-10">
+      <h1 className="text-3xl font-bold text-center mb-10 text-black dark:text-black">
         Запазете час при нашите специалисти
       </h1>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -57,7 +57,7 @@ export default function AppointmentsList() {
               height={128}
               className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-sky-100 shadow"
             />
-            <h2 className="text-xl font-semibold mb-4 text-center">
+            <h2 className="text-xl font-semibold mb-4 text-center text-black dark:text-black">
               {doctor.name}
             </h2>
             <button
@@ -77,7 +77,7 @@ export default function AppointmentsList() {
                   >
                     &times;
                   </button>
-                  <h3 className="text-lg font-bold mb-2 text-center">
+                  <h3 className="text-lg font-bold mb-2 text-center text-black dark:text-black">
                     {doctor.name}
                   </h3>
                   <iframe
