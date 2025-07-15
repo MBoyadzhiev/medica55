@@ -18,7 +18,7 @@ export default function Home() {
       </AuroraBackground>
       <div className="mb-8 mt-8 text-center text-black">
         <img
-          src="/logo.png"
+          src="/logo.PNG"
           alt="Медицински център Медика 55"
           className="mx-auto mb-8 w-60 h-60 object-contain mt-8"
         />

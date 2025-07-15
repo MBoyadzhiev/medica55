@@ -35,7 +35,7 @@ export default function Navbar() {
       {/* Main navbar content */}
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo" className="h-20" />
+          <img src="/logo.PNG" alt="Logo" className="h-20" />
           <span className="text-black text-2xl font-bold">
             МЦ &quot;Медика 55&quot;{" "}
           </span>
