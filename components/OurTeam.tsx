@@ -105,7 +105,7 @@ export function OurTeam() {
 
   return (
     <section className="w-full bg-white py-16 flex flex-col items-center justify-center mt-16">
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+      <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-black dark:text-black">
         Нашият екип
       </h2>
       <AnimatePresence>
@@ -144,7 +144,7 @@ export function OurTeam() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white sm:rounded-3xl overflow-hidden dark:bg-white/95"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
