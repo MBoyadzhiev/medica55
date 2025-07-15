@@ -20,11 +20,6 @@ export default function Gallery() {
           height={600}
         />
         <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-          <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
-            Gallery
-          </h1>
-        </div>
       </div>
       <GalleryPage />
       <Footer />
