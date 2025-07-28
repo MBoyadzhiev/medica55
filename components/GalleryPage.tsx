@@ -4,24 +4,12 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  { src: "/ped_gastro.jpg", alt: "Gallery Image 1" },
-  { src: "/ped_pulmo.jpg", alt: "Gallery Image 2" },
-  { src: "/ped_alergy.jpg", alt: "Gallery Image 3" },
-  { src: "/ped_endo.jpg", alt: "Gallery Image 4" },
-  { src: "/ped_rheuma.jpg", alt: "Gallery Image 5" },
-  { src: "/pediatrics.jpg", alt: "Gallery Image 6" },
-  { src: "/ped_gastro.jpg", alt: "Gallery Image 7" },
-  { src: "/ped_pulmo.jpg", alt: "Gallery Image 8" },
-  { src: "/ped_alergy.jpg", alt: "Gallery Image 9" },
-  { src: "/ped_endo.jpg", alt: "Gallery Image 10" },
-  { src: "/ped_rheuma.jpg", alt: "Gallery Image 11" },
-  { src: "/pediatrics.jpg", alt: "Gallery Image 12" },
-  { src: "/ped_gastro.jpg", alt: "Gallery Image 13" },
-  { src: "/ped_pulmo.jpg", alt: "Gallery Image 14" },
-  { src: "/ped_alergy.jpg", alt: "Gallery Image 15" },
-  { src: "/ped_endo.jpg", alt: "Gallery Image 16" },
-  { src: "/ped_rheuma.jpg", alt: "Gallery Image 17" },
-  { src: "/pediatrics.jpg", alt: "Gallery Image 18" },
+  { src: "/medica1.jpg", alt: "Медика 55 Варна" },
+  { src: "/medica2.jpg", alt: "Медика 55 Варна" },
+  { src: "/medica3.jpg", alt: "Медика 55 Варна" },
+  { src: "/medica4.jpg", alt: "Медика 55 Варна" },
+  { src: "/medica5.jpg", alt: "Медика 55 Варна" },
+  { src: "/medica6.jpg", alt: "Медика 55 Варна" },
 ];
 
 const GalleryPage = () => {
@@ -41,7 +29,7 @@ const GalleryPage = () => {
     <div className="py-8 px-2 md:px-8 mt-10">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {images.map((img, idx) => (
-          <div key={img.src + idx}>
+          <div key={img.src + idx} className="flex flex-col items-center">
             <Image
               className="w-full h-64 object-cover rounded-lg cursor-pointer transition-transform duration-200 hover:scale-105"
               src={img.src}
@@ -50,6 +38,9 @@ const GalleryPage = () => {
               height={600}
               onClick={() => setLightboxIdx(idx)}
             />
+            <span className="mt-2 text-sm text-gray-700 text-center">
+              {img.alt}
+            </span>
           </div>
         ))}
       </div>
@@ -62,7 +53,9 @@ const GalleryPage = () => {
           <Image
             src={images[lightboxIdx].src}
             alt={images[lightboxIdx].alt}
-            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg border-4 border-white"
+            width={1200}
+            height={800}
+            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg border-4 border-white object-contain"
             onClick={(e) => e.stopPropagation()}
           />
         </div>
