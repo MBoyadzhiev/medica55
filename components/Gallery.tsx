@@ -9,7 +9,7 @@ export function Gallery() {
     {
       title: "Детска Гастроентерология",
       button: "Виж всички снимки",
-      src: "/ped_gastro.jpg",
+      src: "/medica1.jpg",
       onClick: () => router.push("/gallery"),
       width: 800,
       height: 600,
@@ -17,7 +17,7 @@ export function Gallery() {
     {
       title: "Детска Пулмология",
       button: "Виж всички снимки",
-      src: "/ped_pulmo.jpg",
+      src: "/medica2.jpg",
       onClick: () => router.push("/gallery"),
       width: 800,
       height: 600,
@@ -25,7 +25,7 @@ export function Gallery() {
     {
       title: "Детска Алергология",
       button: "Виж всички снимки",
-      src: "/ped_alergy.jpg",
+      src: "/medica4.jpg",
       onClick: () => router.push("/gallery"),
       width: 800,
       height: 600,
@@ -33,7 +33,7 @@ export function Gallery() {
     {
       title: "Детска Ендокринология",
       button: "Виж всички снимки",
-      src: "/ped_endo.jpg",
+      src: "/medica5.jpg",
       onClick: () => router.push("/gallery"),
       width: 800,
       height: 600,

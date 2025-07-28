@@ -26,7 +26,7 @@ const ContactInfo = () => (
         </span>
         <div>
           <div className="text-gray-800 font-semibold">Email</div>
-          <div className="text-gray-600 text-sm">medic55varna@gmail.com</div>
+          <div className="text-gray-600 text-sm">medica55varna@gmail.com</div>
         </div>
       </div>
       <div className="flex items-center gap-4">

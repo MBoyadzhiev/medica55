@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://medica55.bg/sitemap.xml 
