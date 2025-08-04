@@ -2,6 +2,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GalleryPage from "@/components/GalleryPage";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Галерия | Медика 55 - Детски медицински център Варна",
+  description:
+    "Галерия снимки на Медика 55 - детски медицински център във Варна. Вижте нашите медицински кабинети и екип от специалисти.",
+  alternates: {
+    canonical: "https://medica55.bg/gallery",
+  },
+};
 
 export default function Gallery() {
   return (

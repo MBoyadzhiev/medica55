@@ -41,9 +41,9 @@ const cards = [
     ctaLink: "#",
     content: () => (
       <p>
-        Специалист по детска алергология и пулмология. Провежда алергологични
-        тестове и съвременно лечение на алергии и белодробни заболявания при
-        деца.
+        Специалист по детска алергология и пулмология. Педиатър Провежда
+        алергологични тестове и съвременно лечение на алергии и белодробни
+        заболявания при деца.
       </p>
     ),
   },
@@ -69,9 +69,8 @@ const cards = [
       <p>
         Детски ревматолог с над 10 години медицински опит с интереси в областта
         на диагностиката и лечението на автоинфламаторни заболявания, периодични
-        синдроми и васкулити. Извършва диагностика и лечение на ревматологични
-        заболявания, възпалителни и дегенеративни ставни заболявания, системни
-        заболявания на съединителната тъкан и др.
+        синдроми и васкулити. Извършва диагностика и лечение на артрити,
+        системни заболявания на съединителната тъкан и др.
       </p>
     ),
   },
@@ -185,22 +184,22 @@ export function OurTeam() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-4xl mx-auto w-full gap-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <ul className="max-w-6xl mx-auto w-full gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 rounded-xl cursor-pointer"
+            className="p-6 flex flex-col justify-center items-center hover:bg-neutral-50 rounded-xl cursor-pointer transition-all duration-300 hover:shadow-lg"
           >
-            <div className="flex gap-4 flex-col md:flex-row ">
+            <div className="flex flex-col items-center text-center">
               <motion.div
                 layoutId={`image-${card.title}-${id}`}
-                className="w-28 h-28 flex-shrink-0 mx-auto"
+                className="w-40 h-40 flex-shrink-0 mb-4"
               >
                 <Image
-                  width={112}
-                  height={112}
+                  width={160}
+                  height={160}
                   src={card.src}
                   alt={card.title}
                   className="w-full h-full rounded-lg object-cover object-top"
@@ -209,7 +208,7 @@ export function OurTeam() {
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 text-center md:text-left"
+                  className="font-semibold text-neutral-800 text-lg text-center"
                 >
                   {card.title}
                 </motion.h3>
