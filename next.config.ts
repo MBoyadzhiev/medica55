@@ -9,6 +9,39 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
+  trailingSlash: false,
+  // Production redirects - only active in production
+  ...(process.env.NODE_ENV === 'production' ? {
+    async redirects() {
+      return [
+        // Redirect www to non-www (canonical)
+        {
+          source: '/:path*',
+          has: [
+            {
+              type: 'host',
+              value: 'www.medica55.bg',
+            },
+          ],
+          destination: 'https://medica55.bg/:path*',
+          permanent: true,
+        },
+        // Redirect HTTP to HTTPS
+        {
+          source: '/:path*',
+          has: [
+            {
+              type: 'header',
+              key: 'x-forwarded-proto',
+              value: 'http',
+            },
+          ],
+          destination: 'https://medica55.bg/:path*',
+          permanent: true,
+        },
+      ];
+    },
+  } : {}),
   async headers() {
     return [
       {

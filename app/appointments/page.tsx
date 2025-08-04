@@ -2,6 +2,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AppointmentsList from "@/components/AppointmentsList";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Записване на час | Медика 55 - Детски медицински център Варна",
+  description:
+    "Запишете час при детски специалист в Медика 55 Варна. Детска алергология, гастроентерология, пулмология, ревматология, ендокринология. Телефон: 0899 83 48 10.",
+  alternates: {
+    canonical: "https://medica55.bg/appointments",
+  },
+};
 
 export default function AppointmentsPage() {
   return (
@@ -27,7 +37,7 @@ export default function AppointmentsPage() {
           <h1 className="text-3xl md:text-5xl font-bold mb-4 text-blue-900">
             Записване на час - Медика 55 | Medica 55
           </h1>
-          <p>
+          <p className="text-base md:text-lg text-gray-700 font-medium px-4">
             Моля при записване в календар добавете телефонен номер в полето за
             допълнителна информация
           </p>

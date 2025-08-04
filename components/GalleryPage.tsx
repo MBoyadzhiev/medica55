@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
+  // { src: "/inside-1.jpg", alt: "Медика 55 Варна" },
+  { src: "/inside-2.png", alt: "Медика 55 Варна" },
+  { src: "/inside-3.png", alt: "Медика 55 Варна" },
   { src: "/medica1.jpg", alt: "Медика 55 Варна" },
   { src: "/medica2.jpg", alt: "Медика 55 Варна" },
   { src: "/medica3.jpg", alt: "Медика 55 Варна" },

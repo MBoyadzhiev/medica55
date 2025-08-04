@@ -6,6 +6,9 @@ import Button from "@/components/ui/Button";
 import { useRouter } from "next/navigation";
 
 const images = [
+  // "/inside-1.jpg",
+  "/inside-2.png",
+  "/inside-3.png",
   "/medica1.jpg",
   "/medica2.jpg",
   "/medica3.jpg",

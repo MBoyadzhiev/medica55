@@ -3,6 +3,16 @@ import LocationMap from "@/components/LocationMap";
 import ContactInfo from "@/components/ContactInfo";
 import WorkingHours from "@/components/WorkingHours";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Контакти и адрес | Медика 55 - Детски медицински център Варна",
+  description:
+    "Контакти на Медика 55 Варна: адрес бул. Владислав Варненчик №142-144, ет. 2, телефон 0899 83 48 10, email medicа55varna@gmail.com. Работно време и как да ни намерите.",
+  alternates: {
+    canonical: "https://medica55.bg/contacts",
+  },
+};
 
 const ContactsPage = () => {
   return (

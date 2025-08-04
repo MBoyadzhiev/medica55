@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     "pediatric endocrinology",
     "Varna",
   ],
+  alternates: {
+    canonical: "https://medica55.bg",
+  },
   openGraph: {
     title: "Медика 55 | Medica 55 - Детски медицински център Варна",
     description:

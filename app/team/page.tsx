@@ -2,6 +2,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TeamCards from "@/components/TeamCards";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Екипът на Медика 55 | Нашите специалисти - Детски медицински център Варна",
+  description:
+    "Запознайте се с екипа на Медика 55 - водещи специалисти в детска медицина: д-р Миглена Георгиева, д-р Ния Рашева, д-р Мартина Гълъбова, д-р Мариана Москова, д-р Мартин Бояджиев.",
+  alternates: {
+    canonical: "https://medica55.bg/team",
+  },
+};
 
 export default function TeamPage() {
   return (
