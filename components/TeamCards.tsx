@@ -5,6 +5,7 @@ const doctors = [
   {
     name: "Проф. д-р Миглена Георгиева",
     photo: "/georgieva.jpg",
+    slug: "georgieva",
     content: (
       <div className="text-base text-gray-800 leading-relaxed">
         Родена в гр. Варна, през 1961 г. Възпитаник е на IV ЕГ &quot;Фредерик
@@ -30,6 +31,7 @@ const doctors = [
   {
     name: "Д-р Ния Рашева",
     photo: "/rasheva.jpg",
+    slug: "rasheva",
     content: (
       <div className="text-base text-gray-800 leading-relaxed">
         Висше медицинско образование през 2004г.МУ-Пловдив с отличен
@@ -48,6 +50,7 @@ const doctors = [
   {
     name: "Д-р Мартина Гълъбова",
     photo: "/galabova.jpg",
+    slug: "galabova",
     content: (
       <div className="text-base text-gray-800 leading-relaxed">
         Родена в град Бургас, специалист по педиатрия, детска пневмология и
@@ -69,6 +72,7 @@ const doctors = [
   {
     name: "Д-р Мариана Москова",
     photo: "/moskova.jpg",
+    slug: "moskova",
     content: (
       <div className="text-base text-gray-800 leading-relaxed">
         Д-р Мариана Москова е специалист детски ендокринолог и педиатър в Русе и
@@ -104,6 +108,7 @@ const doctors = [
   {
     name: "Д-р Мартин Бояджиев",
     photo: "/boyadzhiev.jpg",
+    slug: "boyadzhiev",
     content: (
       <div className="text-base text-gray-800 leading-relaxed">
         Д-р Мартин Бояджиев е специалист детски ревматолог във Варна с над 9
@@ -141,7 +146,7 @@ export default function TeamCards() {
       {" "}
       {/* Add pb-32 for footer space */}
       <Carousel
-        items={doctors.map((doctor) => (
+        items={doctors.map((doctor, index) => (
           <Card
             key={doctor.name}
             card={{
@@ -150,9 +155,9 @@ export default function TeamCards() {
               src: doctor.photo,
               title: doctor.name,
               content: doctor.content,
+              slug: doctor.slug,
             }}
-            index={0}
-            // Remove any blur prop if present
+            index={index}
           />
         ))}
       />

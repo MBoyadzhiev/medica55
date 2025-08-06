@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -28,6 +29,7 @@ type CardType = {
   content: React.ReactNode;
   width: number;
   height: number;
+  slug?: string;
 };
 
 export const CarouselContext = createContext<{
@@ -164,6 +166,7 @@ export const Card = ({
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose } = useContext(CarouselContext); // Remove currentIndex
+  const router = useRouter();
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -186,7 +189,11 @@ export const Card = ({
   useOutsideClick(containerRef, () => handleClose());
 
   const handleOpen = () => {
-    setOpen(true);
+    if (card.slug) {
+      router.push(`/team/${card.slug}`);
+    } else {
+      setOpen(true);
+    }
   };
 
   const handleClose = () => {
