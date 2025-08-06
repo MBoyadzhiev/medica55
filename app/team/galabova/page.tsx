@@ -154,8 +154,8 @@ export default function GalabovaPage() {
             name: "Д-р Мартина Гълъбова",
             jobTitle: "Детски пулмолог и алерголог",
             affiliation: "Медика 55",
-            image: "https://medica55.bg/galabova.jpg",
-            url: "https://medica55.bg/team/galabova",
+            image: "https://medica55.org/galabova.jpg",
+            url: "https://medica55.org/team/galabova",
             description:
               "Д-р Мартина Гълъбова - специалист по детска пневмология, фтизиатрия и алергология в Медика 55. Асистент в Катедра по Педиатрия на МУ Варна.",
             knowsAbout: [

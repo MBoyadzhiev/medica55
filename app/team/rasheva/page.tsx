@@ -124,8 +124,8 @@ export default function RashevaPage() {
             name: "Д-р Ния Рашева",
             jobTitle: "Детски гастроентеролог",
             affiliation: "Медика 55",
-            image: "https://medica55.bg/rasheva.jpg",
-            url: "https://medica55.bg/team/rasheva",
+            image: "https://medica55.org/rasheva.jpg",
+            url: "https://medica55.org/team/rasheva",
             description:
               "Д-р Ния Рашева - специалист по детска гастроентерология в Медика 55. Специализира се в мотилитетни нарушения, жлъчно-чернодробни заболявания и възпалителни чревни заболявания.",
             knowsAbout: [

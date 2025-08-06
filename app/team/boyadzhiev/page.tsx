@@ -160,8 +160,8 @@ export default function BoyadzhievPage() {
             name: "Д-р Мартин Бояджиев",
             jobTitle: "Детски ревматолог",
             affiliation: "Медика 55",
-            image: "https://medica55.bg/boyadzhiev.jpg",
-            url: "https://medica55.bg/team/boyadzhiev",
+            image: "https://medica55.org/boyadzhiev.jpg",
+            url: "https://medica55.org/team/boyadzhiev",
             description:
               "Д-р Мартин Бояджиев - специалист детски ревматолог в Медика 55. Специализира се в диагностиката и лечението на автоинфламаторни заболявания и васкулити.",
             knowsAbout: [

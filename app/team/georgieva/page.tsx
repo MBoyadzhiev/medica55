@@ -159,8 +159,8 @@ export default function GeorgievaPage() {
             name: "Проф. д-р Миглена Георгиева",
             jobTitle: "Детски гастроентеролог",
             affiliation: "Медика 55",
-            image: "https://medica55.bg/georgieva.jpg",
-            url: "https://medica55.bg/team/georgieva",
+            image: "https://medica55.org/georgieva.jpg",
+            url: "https://medica55.org/team/georgieva",
             description:
               "Проф. д-р Миглена Георгиева - специалист по детска гастроентерология и хранене в Медика 55. Началник Втора детска клиника към УМБАЛ Света Марина - Варна.",
             knowsAbout: [

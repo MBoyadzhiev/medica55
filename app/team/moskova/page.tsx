@@ -150,8 +150,8 @@ export default function MoskovaPage() {
             name: "Д-р Мариана Москова",
             jobTitle: "Детски ендокринолог",
             affiliation: "Медика 55",
-            image: "https://medica55.bg/moskova.jpg",
-            url: "https://medica55.bg/team/moskova",
+            image: "https://medica55.org/moskova.jpg",
+            url: "https://medica55.org/team/moskova",
             description:
               "Д-р Мариана Москова - специалист детски ендокринолог и педиатър в Медика 55 с над 20 години опит. Извършва прегледи, диагностика и лечение на деца с ендокринологични проблеми.",
             knowsAbout: [
