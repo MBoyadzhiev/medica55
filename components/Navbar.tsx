@@ -72,7 +72,7 @@ export default function Navbar() {
           </ul>
           {/* Instagram icon - only show on md and up */}
           <a
-            href="https://www.instagram.com/whittierclubwpf/"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 text-black hover:text-pink-400 transition-colors hidden md:inline-flex"

@@ -19,7 +19,7 @@ const doctors: Doctor[] = [
     title: "Календар за проф. д-р Миглена Георгиева",
     photo: "/georgieva.jpg",
     type: "phone",
-    phoneInfo: "Звъннете на телефон 0885 39 77 60 между 10 и 16 часа в неделя.",
+    phoneInfo: "Звъннете на телефон 0899 07 42 68 между 10 и 16 часа в неделя.",
   },
   {
     name: "Д-р Ния Рашева",
@@ -125,6 +125,14 @@ export default function AppointmentsList() {
             <h2 className="text-xl font-semibold mb-4 text-center text-black dark:text-black">
               {doctor.name}
             </h2>
+
+            {/* НЗОК indicator for specific doctors */}
+            {(doctor.name === "Д-р Ния Рашева" ||
+              doctor.name === "Д-р Мартин Бояджиев") && (
+              <div className="mb-3 px-3 py-1 bg-green-600 text-white text-xs font-medium rounded-full">
+                Работи по НЗОК
+              </div>
+            )}
 
             {doctor.type === "coming-soon" ? (
               <div className="text-center">
