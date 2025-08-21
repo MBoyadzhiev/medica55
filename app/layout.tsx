@@ -13,21 +13,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Медика 55 | Medica 55 - Детски медицински център Варна",
+  title:
+    "Медика 55 | Детски медицински център Варна - Детски ревматолог, педиатър",
   description:
-    "Медика 55 - Детски медицински център във Варна. Детска алергология, гастроентерология, пулмология, ревматология, ендокринология. Водещи специалисти: Бояджиев, Москова, Гълъбова, Георгиева, Рашева. Medica 55 - Pediatric Medical Center Varna. Pediatric allergology, gastroenterology, pulmonology, rheumatology, endocrinology.",
+    "Медика 55 - Детски медицински център във Варна. Детски ревматолог Д-р Мартин Бояджиев. Детска алергология, гастроентерология, пулмология, ревматология, ендокринология. Записване: 0888 123 456. Medica 55 - Pediatric Medical Center Varna with pediatric rheumatologist Dr. Martin Boyadzhiev.",
   keywords: [
-    "medica55",
     "медика 55",
+    "medica55",
     "детски медицински център",
+    "детски ревматолог",
+    "детски ревматолог варна",
+    "detski revmatolog varna",
+    "детска ревматология",
+    "детски педиатър",
     "педиатрия",
     "Варна",
     "детска алергология",
     "детска гастроентерология",
     "детска пулмология",
-    "детска ревматология",
     "детска ендокринология",
     "Бояджиев",
+    "Boyadzhiev",
     "Москова",
     "Moskova",
     "Гълъбова",
@@ -35,15 +41,21 @@ export const metadata: Metadata = {
     "Georgieva",
     "Рашева",
     "Rasheva",
+    "ставни болки при деца",
+    "автоимунни заболявания",
+    "васкулити",
+    "ревматолог за деца",
+    "детски лекар",
+    "педиатрична ревматология",
+    "pediatric rheumatology",
     "pediatric allergology",
     "pediatric gastroenterology",
     "pediatric pulmonology",
-    "pediatric rheumatology",
     "pediatric endocrinology",
     "Varna",
   ],
   alternates: {
-    canonical: "https://medica55.bg",
+    canonical: "https://medica55.org",
   },
   icons: {
     icon: "/favicon.ico",
@@ -54,11 +66,11 @@ export const metadata: Metadata = {
     title: "Медика 55 | Medica 55 - Детски медицински център Варна",
     description:
       "Медика 55 - Детски медицински център във Варна. Детска алергология, гастроентерология, пулмология, ревматология, ендокринология. Водещи специалисти: Бояджиев, Москова, Гълъбова, Георгиева, Рашева.",
-    url: "https://medica55.bg/",
+    url: "https://medica55.org/",
     siteName: "Медика 55 | Medica 55",
     images: [
       {
-        url: "https://medica55.bg/logo.PNG",
+        url: "https://medica55.org/logo.PNG",
         width: 800,
         height: 600,
         alt: "Medica 55 Logo",
@@ -74,9 +86,9 @@ export const metadata: Metadata = {
     title: "Медика 55 | Medica 55 - Детски медицински център Варна",
     description:
       "Медика 55 - Детски медицински център във Варна. Детска алергология, гастроентерология, пулмология, ревматология, ендокринология.",
-    images: ["https://medica55.bg/logo.PNG"],
+    images: ["https://medica55.org/logo.PNG"],
   },
-  metadataBase: new URL("https://medica55.bg"),
+  metadataBase: new URL("https://medica55.org"),
 };
 
 export default function RootLayout({
@@ -94,35 +106,67 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/logo.PNG" />
-        <meta property="og:image" content="https://medica55.bg/logo.PNG" />
+        <meta property="og:image" content="https://medica55.org/logo.PNG" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://medica55.bg/logo.PNG" />
+        <meta name="twitter:image" content="https://medica55.org/logo.PNG" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "MedicalOrganization",
-              name: "Медика 55 | Medica 55",
-              url: "https://medica55.bg/",
-              logo: "https://medica55.bg/logo.PNG",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "бул. Владислав Варненчик №142-144, ет. 2",
-                addressLocality: "Варна",
-                addressCountry: "BG",
-              },
-              description:
-                "Детски медицински център във Варна. Детска алергология, гастроентерология, пулмология, ревматология, ендокринология.",
-              medicalSpecialty: [
-                "PediatricAllergyImmunology",
-                "PediatricGastroenterology",
-                "PediatricPulmonology",
-                "PediatricRheumatology",
-                "PediatricEndocrinology",
+              "@graph": [
+                {
+                  "@type": "MedicalOrganization",
+                  name: "Медика 55 | Medica 55",
+                  url: "https://medica55.org/",
+                  logo: "https://medica55.org/logo.PNG",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "бул. Владислав Варненчик №142-144, ет. 2",
+                    addressLocality: "Варна",
+                    addressCountry: "BG",
+                    postalCode: "9000",
+                  },
+                  telephone: "0888 123 456",
+                  email: "info@medica55.bg",
+                  description:
+                    "Детски медицински център във Варна. Детска алергология, гастроентерология, пулмология, ревматология, ендокринология.",
+                  medicalSpecialty: [
+                    "PediatricAllergyImmunology",
+                    "PediatricGastroenterology",
+                    "PediatricPulmonology",
+                    "PediatricRheumatology",
+                    "PediatricEndocrinology",
+                  ],
+                  openingHours: ["Mo-Fr 09:00-17:00", "Sa 09:00-13:00"],
+                  priceRange: "$$",
+                  areaServed: {
+                    "@type": "City",
+                    name: "Варна",
+                  },
+                },
+                {
+                  "@type": "LocalBusiness",
+                  name: "Медика 55 - Детски медицински център",
+                  url: "https://medica55.org/",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "бул. Владислав Варненчик №142-144, ет. 2",
+                    addressLocality: "Варна",
+                    addressCountry: "BG",
+                    postalCode: "9000",
+                  },
+                  telephone: "0888 123 456",
+                  openingHours: ["Mo-Fr 09:00-17:00", "Sa 09:00-13:00"],
+                  priceRange: "$$",
+                  areaServed: {
+                    "@type": "City",
+                    name: "Варна",
+                  },
+                },
               ],
             }),
           }}

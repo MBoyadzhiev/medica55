@@ -1,20 +1,8 @@
 User-agent: *
 Allow: /
 
-# Disallow admin or private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
+# Sitemap
+Sitemap: https://medica55.org/sitemap.xml
 
-# Allow important pages
-Allow: /team
-Allow: /procedures
-Allow: /contacts
-Allow: /appointments
-Allow: /gallery
-
-# Sitemap location
-Sitemap: https://medica55.bg/sitemap.xml
-
-# Crawl delay (optional)
+# Crawl-delay
 Crawl-delay: 1 
