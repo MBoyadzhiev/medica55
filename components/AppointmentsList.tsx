@@ -35,7 +35,9 @@ const doctors: Doctor[] = [
     url: "https://tidycal.com/medica55varna/dr-galabova",
     title: "Календар за д-р Мартина Гълъбова",
     photo: "/galabova.jpg",
-    type: "coming-soon",
+    type: "phone",
+    phoneInfo:
+      "Звъннете на телефон 0878 12 20 35 между 9 и 17 часа всеки делничен ден.",
   },
   {
     name: "Д-р Мариана Москова",
