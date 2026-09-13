@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 interface Doctor {
@@ -8,8 +8,9 @@ interface Doctor {
   url: string;
   title: string;
   photo: string;
-  type: "phone" | "coming-soon" | "tidycal" | "calendly";
+  type: "phone" | "coming-soon" | "tidycal";
   phoneInfo?: string;
+  bookingLink?: string;
 }
 
 const doctors: Doctor[] = [
@@ -40,10 +41,10 @@ const doctors: Doctor[] = [
       "Звъннете на телефон 0878 12 20 35 между 9 и 17 часа всеки делничен ден.",
   },
   {
-    name: "Д-р Мариана Москова",
-    url: "https://superdoc.bg/lekar/mariana-moskova",
-    title: "Календар за д-р Мариана Москова",
-    photo: "/moskova.jpg",
+    name: "Д-р Росица Стойчева",
+    url: "https://superdoc.bg/lekar/rositsa-stoycheva",
+    title: "Календар за д-р Росица Стойчева",
+    photo: "/stoicheva.jpg",
     type: "tidycal",
   },
   {
@@ -51,57 +52,20 @@ const doctors: Doctor[] = [
     url: "https://calendly.com/boyadzhiev-martin/30min",
     title: "Календар за д-р Мартин Бояджиев",
     photo: "/boyadzhiev.jpg",
-    type: "calendly",
+    type: "phone",
+    phoneInfo: "Обадете се на телефон 0883 37 30 42 или запазете ",
+    bookingLink: "https://calendly.com/boyadzhiev-martin/30min",
   },
 ];
-
-interface CalendlyWindow extends Window {
-  Calendly?: {
-    initPopupWidget: (options: { url: string }) => void;
-  };
-}
 
 export default function AppointmentsList() {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
   const [showPhoneInfo, setShowPhoneInfo] = useState<number | null>(null);
 
-  // Load Calendly script
-  useEffect(() => {
-    // Add Calendly CSS
-    const link = document.createElement("link");
-    link.href = "https://assets.calendly.com/assets/external/widget.css";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-
-    // Add Calendly script
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup
-      document.head.removeChild(link);
-      document.head.removeChild(script);
-    };
-  }, []);
-
   const handleAppointmentClick = (doctor: Doctor, idx: number) => {
-    if (doctor.type === "calendly") {
-      // Open Calendly widget for Dr. Boyadzhiev
-      if (
-        typeof window !== "undefined" &&
-        (window as CalendlyWindow).Calendly
-      ) {
-        (window as CalendlyWindow).Calendly?.initPopupWidget({
-          url: doctor.url,
-        });
-      }
-    } else if (doctor.type === "phone") {
-      // Show phone information for Prof. Georgieva and Dr. Rasheva
+    if (doctor.type === "phone") {
       setShowPhoneInfo(showPhoneInfo === idx ? null : idx);
     } else {
-      // Open TidyCal modal for other doctors
       setOpenIdx(idx);
     }
   };
@@ -130,7 +94,8 @@ export default function AppointmentsList() {
 
             {/* НЗОК indicator for specific doctors */}
             {(doctor.name === "Д-р Ния Рашева" ||
-              doctor.name === "Д-р Мартин Бояджиев") && (
+              doctor.name === "Д-р Мартин Бояджиев" ||
+              doctor.name === "Д-р Росица Стойчева") && (
               <div className="mb-3 px-3 py-1 bg-green-600 text-white text-xs font-medium rounded-full">
                 Работи по НЗОК
               </div>
@@ -156,6 +121,19 @@ export default function AppointmentsList() {
                   <div className="mt-4 p-4 bg-sky-50 rounded-lg border border-sky-200 w-full">
                     <p className="text-sm text-sky-800 font-medium text-center">
                       {doctor.phoneInfo || ""}
+                      {doctor.bookingLink && (
+                        <>
+                          {" "}
+                          <a
+                            href={doctor.bookingLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline hover:text-sky-950"
+                          >
+                            тук
+                          </a>
+                        </>
+                      )}
                     </p>
                   </div>
                 )}

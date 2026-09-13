@@ -58,7 +58,7 @@ export default function Navbar() {
               <Link href="/team">Екип</Link>
             </li>
             <li>
-              <Link href="/procedures">Дейонсти</Link>
+              <Link href="/procedures">Дейности</Link>
             </li>
             <li>
               <Link href="/appointments">Запази час</Link>
@@ -70,43 +70,6 @@ export default function Navbar() {
               <Link href="/contacts">Контакти</Link>
             </li>
           </ul>
-          {/* Instagram icon - only show on md and up */}
-          <a
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-2 text-black hover:text-pink-400 transition-colors hidden md:inline-flex"
-            aria-label="Instagram"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-7 h-7"
-            >
-              <rect
-                width="20"
-                height="20"
-                x="2"
-                y="2"
-                rx="5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              />
-              <circle
-                cx="12"
-                cy="12"
-                r="5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              />
-              <circle cx="17" cy="7" r="1.2" fill="currentColor" />
-            </svg>
-          </a>
         </div>
 
         {/* Hamburger for mobile */}
@@ -165,43 +128,6 @@ export default function Navbar() {
             className="py-2 w-full text-center text-black font-medium hover:bg-sky-100"
           >
             Галерия
-          </Link>
-          {/* Instagram icon for mobile */}
-          <Link
-            href="https://www.instagram.com/whittierclubwpf/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 text-black hover:text-pink-400 transition-colors"
-            aria-label="Instagram"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-7 h-7 mx-auto"
-            >
-              <rect
-                width="20"
-                height="20"
-                x="2"
-                y="2"
-                rx="5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              />
-              <circle
-                cx="12"
-                cy="12"
-                r="5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              />
-              <circle cx="17" cy="7" r="1.2" fill="currentColor" />
-            </svg>
           </Link>
         </div>
       )}

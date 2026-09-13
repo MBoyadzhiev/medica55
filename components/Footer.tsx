@@ -30,7 +30,6 @@ const Footer = () => (
         <div>МЦ &quot;Медика 55&quot;</div>
         <div>© 2025 Медицински център &quot;Медика 55&quot;</div>
         <div>Варна бул. &quot;Владислав Варненчик&quot; №142-144, ет. 2</div>
-        <div>0899 83 48 10</div>
       </div>
     </div>
     <div className="w-full mx-auto max-w-screen-xl p-4 pt-0 border-t border-gray-200 dark:border-gray-700 text-center">

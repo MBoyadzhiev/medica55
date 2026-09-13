@@ -65,7 +65,7 @@ export function JoinUs() {
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full">
                   <Link href="/appointments" className="contents w-full">
-                    <Button className="w-full">Запазете час онлайн</Button>
+                    <Button className="w-full">Запазете час онлайн или по телефон</Button>
                   </Link>
                   <Link href="/contacts" className="contents w-full">
                     <Button className="w-full">Контакти</Button>

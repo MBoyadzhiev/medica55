@@ -71,7 +71,7 @@ const PhotoHero = () => {
           className="bg-sky-700 hover:bg-sky-800 text-black border-2 border-white/20 shadow-lg"
           onClick={() => router.push("/appointments")}
         >
-          Запазете час онлайн
+          Запазете час онлайн или по телефон
         </Button>
       </div>
 
@@ -95,7 +95,7 @@ const PhotoHero = () => {
             className="bg-sky-700 hover:bg-sky-800 text-black border-2 border-white/20 shadow-lg px-6 py-3 text-base font-semibold"
             onClick={() => router.push("/appointments")}
           >
-            Запазете час онлайн
+            Запазете час онлайн или по телефон
           </Button>
         </div>
       </div>
